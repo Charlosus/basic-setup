@@ -1,36 +1,48 @@
-import js from '@eslint/js';
-import react from 'eslint-plugin-react';
-import babelParser from '@babel/eslint-parser';
+import js from "@eslint/js";
+import globals from "globals";
+import pluginReact from "eslint-plugin-react";
+import pluginReactRefresh from "eslint-plugin-react-refresh";
+import { defineConfig } from "eslint/config";
 
-export default [
-  js.configs.recommended,
+export default defineConfig([
   {
-    files: ['**/*.jsx', '**/*.js'],
+    files: ["**/*.{js,mjs,cjs,jsx}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+  },
+  {
+    files: ["**/*.{js,mjs,cjs,jsx}"],
     languageOptions: {
-      ecmaVersion: 2022,
-      sourceType: 'module',
-      parser: babelParser,
+      globals: globals.browser,
+      ecmaVersion: "latest",
+      sourceType: "module",
       parserOptions: {
-        requireConfigFile: false,
-        babelOptions: {
-          presets: [['@babel/preset-react', { runtime: 'automatic' }]],
-        },
         ecmaFeatures: {
           jsx: true,
         },
       },
-      globals: {
-        document: 'readonly',
-        window: 'readonly',
-        React: 'readonly',
-      },
-    },
-    plugins: {
-      react,
-    },
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'no-unused-vars': ['warn', { varsIgnorePattern: 'React' }], 
     },
   },
-];
+  {
+    files: ["**/*.{js,mjs,cjs,jsx}"],
+    plugins: {
+      js,
+      react: pluginReact,
+      "react-refresh": pluginReactRefresh,
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+    rules: {
+      ...pluginReact.configs.flat.recommended.rules,
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+  },
+]);
