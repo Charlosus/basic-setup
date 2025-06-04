@@ -22,28 +22,23 @@ This is a starter React project using Vite as the build tool and ESLint for code
    cd basic-setup
 Install dependencies:
 
-```bash
-npm install```
+<pre> ```bash npm install ``` </pre>
 
 Start the development server:
 
-```bash
-npm run dev```
+<pre> ```bash npm run dev ``` </pre>
 
 Run ESLint to check for code issues:
 
-bash
-npm run lint
+<pre> ```bash npm run lint ``` </pre>
 
 Build the project for production:
 
-bash
-npm run build
+<pre> ```bash npm run build ``` </pre>
 
 Preview the production build:
 
-bash
-npm run preview
+<pre> ```bash npm run preview ``` </pre>
 
 Notes
 ESLint config is in eslint.config.js using the flat config system.
