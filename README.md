@@ -22,27 +22,27 @@ This is a starter React project using Vite as the build tool and ESLint for code
    cd basic-setup
 Install dependencies:
 
-```bash
-npm install
+``bash
+npm install```
 
 Start the development server:
 
 ```bash
-npm run dev
+npm run dev```
 
 Run ESLint to check for code issues:
 
-```bash
+bash
 npm run lint
 
 Build the project for production:
 
-```bash
+bash
 npm run build
 
 Preview the production build:
 
-```bash
+bash
 npm run preview
 
 Notes
