@@ -23,23 +23,23 @@ cd basic-setup
 </pre>
 Install dependencies:
 
-<pre> bash npm install  </pre>
-`
+<pre> npm install  </pre>
+
 Start the development server:
 
-<pre> bash npm run dev  </pre>
+<pre> npm run dev  </pre>
 
 Run ESLint to check for code issues:
 
-<pre> bash npm run lint  </pre>
+<pre> npm run lint  </pre>
 
 Build the project for production:
 
-<pre> bash npm run build  </pre>
+<pre> npm run build  </pre>
 
 Preview the production build:
 
-<pre> bash npm run preview  </pre>
+<pre> npm run preview  </pre>
 
 Notes
 ESLint config is in eslint.config.js using the flat config system.
