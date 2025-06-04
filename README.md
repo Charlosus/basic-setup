@@ -17,10 +17,10 @@ This is a starter React project using Vite as the build tool and ESLint for code
 ## Getting Started
 
 1. Clone the repo:
-   <pre> 
-   git clone https://github.com/Charlosus/basic-setup.git
-   cd basic-setup
-   </pre>
+<pre> 
+git clone https://github.com/Charlosus/basic-setup.git   
+cd basic-setup
+</pre>
 Install dependencies:
 
 <pre> bash npm install  </pre>
